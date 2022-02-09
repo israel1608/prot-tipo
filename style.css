@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    background-color:#f1f1f1;
+}
+.contente{
+    margin: auto;
+    height: 600px;
+    width: 750px;
+    border: 1.5px solid black;
+}
+.header{
+    background-color: rgb(99, 99, 87);
+    height: 100px;
+    width: auto;
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    justify-content: center;
+}
+
+.header spam{
+   font-size: 25px;
+}
+.menu-lateral{
+    background-color:rgb(199, 199, 199);
+    width: 240px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.menu-lateral a{
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 1px;
+    border: 0.7px solid black
+}
+.menu-lateral input{
+    margin: 5px;
+}
+.login{
+    padding: 15px;
+    height: 200px;
+    background-color:rgb(156, 156, 156);
+}
+.ativo{
+    background-color: steelblue;
+}
+.capa{
+    background-image: url("https://p7z2w8n8.rocketcdn.me/wp-content/uploads/2020/12/livros-sobre-investimentos-para-todos-os-niveis-de-investidores.jpg");
+
+}
+.informacao{
+    width: 510px;
+    height: 500px;
+    background-color: rgb(253, 253, 253);
+    float: right;
+    text-align: center; 
+}
+
+.emprestimo-contente input{
+    padding: 10px;
+    margin: 5px;
+}
+.adicionar-contente input{
+    padding: 10px;
+    margin: 5px;
+}
+.remover-contente input{
+    padding: 10px;
+    margin: 5px;
+}
+.remover-contente span{
+    margin: 10px;
+}
+.pesquisa{
+    height: 50px;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#txtBusca{
+    margin: auto;
+    width: 400px;
+}
+#consulta{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.cabecalho{
+    padding: 10px;
+    font-size: small;
+}
+.corpo{
+    padding: 5px;
+    overflow: hidden;
+    font-size: small;
+    
+}
+.titulo{
+    width: 50%;
+}
+#historico{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+#add-cliente{
+    display: none;
+}
+
+#remover-cliente{
+    display: none;
+}
+
+.consulta-contente{
+    display: none;
+}
+.emprestimo-contente{
+    display: none;
+}
+.adicionar-contente{
+    display: none;
+}
+.remover-contente{
+    display: none;
+}
+.historico-contente{
+    display: none;
+}
+/*
+#add-livro{
+    display: none;
+}
+*/
