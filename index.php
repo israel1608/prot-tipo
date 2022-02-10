@@ -67,7 +67,7 @@
             <form action="#">
         <input type="number" name="cpf-cliente" id="cpf-cliente" placeholder="CPF cliente"><br>
         <input type="number" name="id-livro" id="id-livro" placeholder="ID do livro"><br>
-        <input type="password" name="senha-cliente" id="senha-cliente" placeholder="senha"><br>
+        <input type="password" name="senha-cliente" id="senha-cliente" placeholder="senha de 6 dígitos"><br>
         <input type="submit" value="alugar">
         </form>
     </div>
@@ -85,9 +85,10 @@
         </form>
         <form id="add-cliente"action="#">
             <input type="text" name="nome-cliente" id="nome-cliente" placeholder="nome"><br>
-            <input type="text" name="sobrenome-cliente" id="sobrenome-cliente" placeholder="sobrenome"><br>
+            <input type="email" name="email-cliente" id="email-cliente" placeholder="email"><br>
+            <input type="number" name="telefone-cliente" id="telefone-cliente" placeholder="Telefone"><br>
             <input type="number" name="cpf-cliente" id="cpf-cliente" placeholder="CPF"><br>
-            <input type="password" name="senha-cadastro" id="senha-cadastro" placeholder="senha"><br>
+            <input type="password" name="senha-cadastro" id="senha-cadastro" placeholder="senha de 6 dígitos"><br>
             <input type="submit" value="Adicionar">
         </form>
     </div>
@@ -101,7 +102,7 @@
             <input type="submit" value="Remover">
         </form>
         <form id="remover-cliente"action="#">
-            <input type="number" name="id-cliente" id="id-cliente" placeholder="ID do cliente"><br>
+            <input type="number" name="id-cliente" id="id-cliente" placeholder="CPF do cliente"><br>
             <input type="password" name="senha-adm" id="senha-adm" placeholder="senha de adiministrador"><br>
             <input type="submit" value="Remover">
         </form>
