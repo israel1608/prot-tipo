@@ -58,3 +58,19 @@ function removerLivro(){
     $("#remover-livro").css("display","block");
     $("#remover-cliente").css("display","none");
 }
+
+var checkbox = document.getElementById("olho");
+function verSenha(){
+    if(checkbox.checked){
+        $("#senha-admin").attr("type", "text");
+        }
+    else {
+        $("#senha-admin").attr("type", "password");
+        }
+};
+
+$(function() {
+    $("#ano-livro-cadastro").keyup(function() {
+        $("#ano-livro-cadastro").val(this.value.match(/[0-9]*/));
+    });
+  });

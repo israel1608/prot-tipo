@@ -45,16 +45,15 @@ body{
     background-color:rgb(156, 156, 156);
 }
 .ativo{
-    background-color: steelblue;
+    background-color:  steelblue;
 }
 .capa{
     background-image: url("https://p7z2w8n8.rocketcdn.me/wp-content/uploads/2020/12/livros-sobre-investimentos-para-todos-os-niveis-de-investidores.jpg");
-
 }
 .informacao{
     width: 510px;
     height: 500px;
-    background-color: rgb(253, 253, 253);
+    background-color: white;
     float: right;
     text-align: center; 
 }
@@ -134,8 +133,9 @@ body{
 .historico-contente{
     display: none;
 }
-/*
-#add-livro{
-    display: none;
+
+.input-senha{
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
 }
-*/
