@@ -35,9 +35,9 @@ function mostrar(n){
         $("#menu5").addClass("ativo")
     }
 }
-$(function(){
+/*$(function(){
     mostrar(1)
-})
+})*/
 
 function cadastrarCliente(){
     $("#add-livro").css("display","none");

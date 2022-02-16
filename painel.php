@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!--ajax-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="http://malsup.github.io/min/jquery.form.min.js"></script>
 
     <title>Sistema de gerenciamento</title>
 </head>
@@ -81,7 +85,7 @@
             <input type="text" name="autor-livro-cadastro" id="autor-livro-cadastro" placeholder="autor"required><br>
             <input type="text" name="editora-livro-cadastro" id="editora-livro-cadastro" placeholder="editora"required><br>
             <input type="text" name="ano-livro-cadastro"id="ano-livro-cadastro" placeholder="Ano" required maxlength="4" pattern="([0-9]{4})"/><br>
-            <input type="hidden" name="situaçao-livro-cadastro" value="Disponível">
+            <input type="hidden" name="situacao-livro-cadastro" value="Disponível">
             <input type="submit" value="Adicionar" >
         </form>
         <form id="add-cliente"action="#">
