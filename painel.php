@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="http://malsup.github.io/min/jquery.form.min.js"></script>
 
+    <script src="JS/forms.js"></script>
+
     <title>Sistema de gerenciamento</title>
 </head>
 <body>
@@ -80,21 +82,24 @@
         <h2>Cadastrar</h2>
         <input onclick="cadastrarCliente()" type="radio" name="tipo-cadastro">cliente
         <input onclick="cadastrarLivro()" type="radio" checked name="tipo-cadastro">livro <br>
-        <form id="add-livro" action="addLivro.php" method="post">
+        <form id="add-livro" action="Cadastro/addLivro.php" method="post">
             <input type="text" name="titulo-livro-cadastro" id="titulo-livro-cadastro" placeholder="título" required><br>
             <input type="text" name="autor-livro-cadastro" id="autor-livro-cadastro" placeholder="autor"required><br>
             <input type="text" name="editora-livro-cadastro" id="editora-livro-cadastro" placeholder="editora"required><br>
             <input type="text" name="ano-livro-cadastro"id="ano-livro-cadastro" placeholder="Ano" required maxlength="4" pattern="([0-9]{4})"/><br>
             <input type="hidden" name="situacao-livro-cadastro" value="Disponível">
             <input type="submit" value="Adicionar" >
+            <div id="mensagem-livro-cadastro"></div>
         </form>
-        <form id="add-cliente"action="#">
+        <form id="add-cliente"action="Cadastro/addCliente.php" method="post">
             <input type="text" name="nome-cliente-cadastro" id="nome-cliente-cadastro" placeholder="nome"><br>
             <input type="email" name="email-cliente-cadastro" id="email-cliente-cadastro" placeholder="email"><br>
-            <input type="number" name="telefone-cliente-cadastro" id="telefone-cliente-cadastro" placeholder="Telefone"><br>
-            <input type="number" name="cpf-cliente-cadastro" id="cpf-cliente-cadastro" placeholder="CPF"><br>
-            <input type="password" name="senha-cliente-cadastro" id="senha-cliente-cadastro" placeholder="senha de 6 dígitos" autocomplete="off"><br>
+            <input type="text" name="telefone-cliente-cadastro" id="telefone-cliente-cadastro" size="20" maxlength="15" onkeypress="mascara(this)" placeholder="Telefone"><br>
+            <input type="text" name="cpf-cliente-cadastro" id="cpf-cliente-cadastro" placeholder="CPF" onkeypress="pontuacaoCPF(this)" size="20" maxlength="14"><br>
+            <input type="password" name="senha-cliente-cadastro" id="senha-cliente-cadastro" placeholder="senha de 6 dígitos" autocomplete="off"minlength="6" maxlength="6" pattern="[0-9]{6}"><br>
+            <input type="hidden" name="situacao-cliente-cadastro"value="Normal">
             <input type="submit" value="Adicionar">
+            <div id="mensagem-cliente-cadastro"></div>
         </form>
     </div>
     <div class="remover-contente">

@@ -1,5 +1,9 @@
 <?php
-include('config/conn.php');
+// Incluindo arquivo de conexão
+require_once('../config/conn.php');
+
+// Funções de utilidade
+require_once('../funcs/util.php');
 
 $titulo = $_POST['titulo-livro-cadastro'];
 $autor = $_POST['autor-livro-cadastro'];
@@ -15,10 +19,7 @@ $stmt->bindParam(':editora', $editora, PDO::PARAM_STR);
 $stmt->bindParam(':ano', $ano, PDO::PARAM_STR);
 $stmt->bindParam(':situacao', $situacao, PDO::PARAM_STR);
 
-if($stmt->execute()){
-    header('Location: painel.php');
-    exit();
-};
+echo ($stmt->execute()) ? retorno('Livro cadastrado com sucesso', true) : retorno($stmt->errorInfo());
 
 
 

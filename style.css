@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color:#f1f1f1;
+    background-color:#f1f1f1 !important;
 }
 .contente{
     margin: auto;
@@ -23,8 +23,8 @@ body{
 }
 .menu-lateral{
     background-color:rgb(199, 199, 199);
-    width: 240px;
-    height: 500px;
+    width: 30%;
+    height: 498px;
     display: flex;
     flex-direction: column;
 }
@@ -51,8 +51,8 @@ body{
     background-image: url("https://p7z2w8n8.rocketcdn.me/wp-content/uploads/2020/12/livros-sobre-investimentos-para-todos-os-niveis-de-investidores.jpg");
 }
 .informacao{
-    width: 510px;
-    height: 500px;
+    width: 70%;
+    height: 498px;
     background-color: white;
     float: right;
     text-align: center; 
@@ -123,12 +123,16 @@ body{
 }
 .emprestimo-contente{
     display: none;
+    padding: 15px;
 }
 .adicionar-contente{
     display: none;
+    padding: 15px;
+
 }
 .remover-contente{
     display: none;
+    padding: 15px;
 }
 .historico-contente{
     display: none;
@@ -138,4 +142,10 @@ body{
     align-items: center;
     justify-content: center;
     display: inline-flex;
+}
+h2{
+    font-size: 25px !important;
+}
+a{
+    color: #551a8b !important;
 }

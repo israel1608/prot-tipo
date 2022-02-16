@@ -74,3 +74,4 @@ $(function() {
         $("#ano-livro-cadastro").val(this.value.match(/[0-9]*/));
     });
   });
+
