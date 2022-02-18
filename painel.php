@@ -13,6 +13,7 @@
     <script src="http://malsup.github.io/min/jquery.form.min.js"></script>
 
     <script src="JS/forms.js"></script>
+    <script src="JS/pontuacao.js"></script>
 
     <title>Sistema de gerenciamento</title>
 </head>
@@ -86,7 +87,8 @@
             <input type="text" name="titulo-livro-cadastro" id="titulo-livro-cadastro" placeholder="título" required><br>
             <input type="text" name="autor-livro-cadastro" id="autor-livro-cadastro" placeholder="autor"required><br>
             <input type="text" name="editora-livro-cadastro" id="editora-livro-cadastro" placeholder="editora"required><br>
-            <input type="text" name="ano-livro-cadastro"id="ano-livro-cadastro" placeholder="Ano" required maxlength="4" pattern="([0-9]{4})"/><br>
+            <input type="text" name="ano-livro-cadastro"id="ano-livro-cadastro" placeholder="Ano" required maxlength="4" pattern="([0-9]{4})"/>
+            <input type="number" name="qnt" id="qnt" placeholder="qnt" min="1" required><br>
             <input type="hidden" name="situacao-livro-cadastro" value="Disponível">
             <input type="submit" value="Adicionar" >
             <div id="mensagem-livro-cadastro"></div>
@@ -95,8 +97,9 @@
             <input type="text" name="nome-cliente-cadastro" id="nome-cliente-cadastro" placeholder="nome"><br>
             <input type="email" name="email-cliente-cadastro" id="email-cliente-cadastro" placeholder="email"><br>
             <input type="text" name="telefone-cliente-cadastro" id="telefone-cliente-cadastro" size="20" maxlength="15" onkeypress="mascara(this)" placeholder="Telefone"><br>
-            <input type="text" name="cpf-cliente-cadastro" id="cpf-cliente-cadastro" placeholder="CPF" onkeypress="pontuacaoCPF(this)" size="20" maxlength="14"><br>
-            <input type="password" name="senha-cliente-cadastro" id="senha-cliente-cadastro" placeholder="senha de 6 dígitos" autocomplete="off"minlength="6" maxlength="6" pattern="[0-9]{6}"><br>
+            <input type="text" name="cpf-cliente-cadastro" id="cpf-cliente-cadastro" placeholder="CPF" onkeypress="pontuacaoCPF(this)" size="20" maxlength="14"
+            pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"><br>
+            <input type="password" name="senha-cliente-cadastro" id="senha-cliente-cadastro" placeholder="senha de 6 dígitos" autocomplete="off"minlength="6" maxlength="6" pattern="[0-9]{6}"/><br>
             <input type="hidden" name="situacao-cliente-cadastro"value="Normal">
             <input type="submit" value="Adicionar">
             <div id="mensagem-cliente-cadastro"></div>
@@ -106,15 +109,18 @@
         <h2>Remover</h2>
         <input onclick="removerCliente()" type="radio" name="tipo-remover">cliente
         <input onclick="removerLivro()" type="radio" checked name="tipo-remover">livro <br>
-        <form id="remover-livro"action="#">
+        <form id="remover-livro"action="Exclusao/excluirLivro.php" method="post">
             <input type="number" name="id-livro-remover" id="id-livro-remover" placeholder="ID do livro"><br>
-            <input type="password" name="senha-adm" placeholder="senha de administrador" autocomplete="off"><br>
+            <input type="password" name="senha-adm-livro" id="senha-adm-livro" placeholder="senha de administrador" autocomplete="off"><br>
             <input type="submit" value="Remover">
+            <div id="msg-exclusao-livro"></div>
         </form>
-        <form id="remover-cliente"action="#">
-            <input type="number" name="id-cliente-remover" id="id-cliente-remover" placeholder="CPF do cliente"><br>
-            <input type="password" name="senha-adm" placeholder="senha de administrador" autocomplete="off"><br>
+        <form id="remover-cliente"action="Exclusao/excluirCliente.php" method="post">
+            <input type="text" name="id-cliente-remover" id="id-cliente-remover" placeholder="CPF do cliente" onkeypress="pontuacaoCPF(this)" size="20" maxlength="14"
+            pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"><br>
+            <input type="password" name="senha-adm-cliente" id="senha-adm-cliente" placeholder="senha de administrador" autocomplete="off"><br>
             <input type="submit" value="Remover">
+            <div id="msg-exclusao-cliente"></div>
         </form>
         <span>Esta ação não poderá ser desfeita</span>
     </div>      

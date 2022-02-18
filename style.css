@@ -143,6 +143,12 @@ body{
     justify-content: center;
     display: inline-flex;
 }
+#ano-livro-cadastro{
+    width: 125px;
+}
+#qnt{
+    width: 65px;
+}
 h2{
     font-size: 25px !important;
 }

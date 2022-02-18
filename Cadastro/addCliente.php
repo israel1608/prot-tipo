@@ -12,6 +12,11 @@ $cpf = $_POST['cpf-cliente-cadastro'];
 $senha = md5($_POST['senha-cliente-cadastro']);
 $situacao = $_POST['situacao-cliente-cadastro'];
 
+if(empty($nome)||empty($email)||empty($telefone)||empty($cpf)){
+    echo retorno("Preencha todos os dados");
+    exit();
+}
+
 $stmt = $pdo->prepare("INSERT INTO clientes (nome,email,telefone,cpf,senha,situacao) VALUES (:nome,:email,:telefone,:cpf,:senha,:situacao);");
 
 $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);

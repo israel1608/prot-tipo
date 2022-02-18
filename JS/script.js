@@ -33,12 +33,15 @@ function mostrar(n){
         case 5 : limpar();
         $('.historico-contente').css("display","block");
         $("#menu5").addClass("ativo")
+        break;
     }
 }
-/*$(function(){
-    mostrar(1)
-})*/
 
+$(function(){   //Mostrar histórico ao recarregar a página
+    mostrar(5);
+})
+
+// alternar entre livros e clientes na área do cadastro
 function cadastrarCliente(){
     $("#add-livro").css("display","none");
     $("#add-cliente").css("display","block");
@@ -58,7 +61,9 @@ function removerLivro(){
     $("#remover-livro").css("display","block");
     $("#remover-cliente").css("display","none");
 }
+////
 
+// Exibir senha na área de login
 var checkbox = document.getElementById("olho");
 function verSenha(){
     if(checkbox.checked){
@@ -68,10 +73,32 @@ function verSenha(){
         $("#senha-admin").attr("type", "password");
         }
 };
+////
+
+// Validações do input de cadastrar clientes/livros
 
 $(function() {
     $("#ano-livro-cadastro").keyup(function() {
         $("#ano-livro-cadastro").val(this.value.match(/[0-9]*/));
     });
   });
+  
+$(function() {
+    $("#senha-cliente-cadastro").keyup(function() {
+        $("#senha-cliente-cadastro").val(this.value.match(/[0-9]*/));
+    });
+});
+
+$(function() {
+    $("#cpf-cliente-cadastro").keyup(function() {
+        $("#cpf-cliente-cadastro").val(this.value.match(/[.0-9-]*/));
+    });
+});
+
+$(function() {
+    $("#telefone-cliente-cadastro").keyup(function() {
+        $("#telefone-cliente-cadastro").val(this.value.match(/[()0-9- ]*/));
+    });
+});
+
 
