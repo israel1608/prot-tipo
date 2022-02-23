@@ -35,30 +35,35 @@
         <table id="consulta">
             <tbody>
                 <tr>
-                    <th class="cabecalho titulo">Título</th>
+                    <th class="cabecalho">ID</th>
+                    <th class="cabecalho">Título</th>
                     <th class="cabecalho">Autor</th>
                     <th class="cabecalho">Ano</th>
                     <th class="cabecalho">Situação</th>
                 </tr>
                 <tr>
+                    <td class="corpo"><a href="#">199</a></td>
                     <td class="corpo"> <a href="#">As Crônicas de alguma coisa</a></td>
                     <td class="corpo"><a href="#">Ninguém</a></td>
                     <td class="corpo"><a href="#">1990</a></td>
                     <td class="corpo"><a href="#">alugado</a></td>
                 </tr>
                 <tr>
+                    <td class="corpo"><a href="#">99</a></td>
                     <td class="corpo"> <a href="#">A volta dos que não foram</a></td>
                     <td class="corpo"><a href="#">Costa,Israel</a></td>
                     <td class="corpo"><a href="#">2020</a></td>
                     <td class="corpo"><a href="#">disponível</a></td>
                 </tr>
                 <tr>
-                    <td class="corpo"> <a href="#">As Crônicas de alguma coisa</a></td>
+                    <td class="corpo"><a href="#">9</a></td>
+                    <td class="corpo"><a href="#">As Crônicas de alguma coisa</a></td>
                     <td class="corpo"><a href="#">Ninguém</a></td>
                     <td class="corpo"><a href="#">1990</a></td>
                     <td class="corpo"><a href="#">alugado</a></td>
                 </tr>
                 <tr>
+                    <td class="corpo"><a href="#">84</a></td>
                     <td class="corpo"> <a href="#">A volta dos que não foram</a></td>
                     <td class="corpo"><a href="#">Costa,Israel</a></td>
                     <td class="corpo"><a href="#">2020</a></td>
@@ -71,11 +76,14 @@
 
     <div class="emprestimo-contente ">
         <h2>formulario para empréstimo</h2>
-            <form action="#">
-        <input type="number" name="cpf-cliente-emprestimo" id="cpf-cliente-emprestimo" placeholder="CPF cliente"><br>
-        <input type="number" name="id-livro-emprestimo" id="id-livro-emprestimo" placeholder="ID do livro"><br>
-        <input type="password" name="senha-cliente-emprestimo" id="senha-cliente-emprestimo" placeholder="senha de 6 dígitos" autocomplete="off"><br>
-        <input type="submit" value="alugar">
+        <form id="emprestimo" action="emprestimo.php" method="post">
+            <input type="texte" name="cpf-cliente-emprestimo" id="cpf-cliente-emprestimo" placeholder="CPF cliente" onkeypress="pontuacaoCPF(this)" size="20" maxlength="14"
+            pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}"><br>
+            <input type="number" name="id-livro-emprestimo" id="id-livro-emprestimo" placeholder="ID do livro"><br>
+            <input type="password" name="senha-cliente-emprestimo" id="senha-cliente-emprestimo" placeholder="senha de 6 dígitos" autocomplete="off" minlength="6" maxlength="6" pattern="([0-9]{6})"/><br>
+            <input type="password" name="senha-adm-emprestimo" id="senha-adm-emprestimo" placeholder="senha de administrador" autocomplete="off"><br>
+            <input type="submit" value="alugar">
+            <div id="msg-emprestimo"></div>
         </form>
     </div>
 
@@ -135,32 +143,39 @@
         <table id="historico">
             <tbody>
                 <tr>
+                    <th class="cabecalho">ID</th>
                     <th class="cabecalho">cliente</th>
                     <th class="cabecalho">livro</th>
                     <th class="cabecalho">saída</th>
-                    <th class="cabecalho">data de devolução</th>
+                    <th class="cabecalho">devolução</th>
                     <th class="cabecalho">status</th>
                 </tr>
                 <tr>
+                    <td class="corpo"><a href="#">894</a></td>
                     <td class="corpo"><a href="#">Larissa Costa</a></td>
-                    <td class="corpo"><a href="#">76894434</a></td>
+                    <td class="corpo"><a href="#">76</a></td>
                     <td class="corpo">06/02/2022</td>
                     <td class="corpo">13/02/2022</td>
                     <td class="corpo">atrasado</td>
+                    
                 </tr>
+
                 <tr>
-                    <td class="corpo"><a href="#">Pedro Álvaro</a></td>
-                    <td class="corpo"><a href="#">055848464</a></td>
-                    <td class="corpo">08/02/2022</td>
-                    <td class="corpo">15/02/2022</td>
-                    <td class="corpo">no prazo</td>
+                    <td class="corpo"><a href="#">435</a></td>
+                    <td class="corpo"><a href="#">Larissa Costa</a></td>
+                    <td class="corpo"><a href="#">34</a></td>
+                    <td class="corpo">06/02/2022</td>
+                    <td class="corpo">13/02/2022</td>
+                    <td class="corpo">atrasado</td>       
                 </tr>
+
                 <tr>
-                    <td class="corpo"><a href="#">João Gomes</a></td>
-                    <td class="corpo"><a href="#">6768852</a></td>
-                    <td class="corpo">03/02/2022</td>
-                    <td class="corpo">10/02/2022</td>
-                    <td class="corpo">devolvido</td>
+                    <td class="corpo"><a href="#">434</a></td>
+                    <td class="corpo"><a href="#">Larissa Costa</a></td>
+                    <td class="corpo"><a href="#">4</a></td>
+                    <td class="corpo">06/02/2022</td>
+                    <td class="corpo">13/02/2022</td>
+                    <td class="corpo">atrasado</td>                   
                 </tr>
                 
             </tbody>

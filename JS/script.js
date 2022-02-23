@@ -101,4 +101,18 @@ $(function() {
     });
 });
 
+// Validações do input de emprestimos
+
+$(function() {
+    $("#senha-cliente-emprestimo").keyup(function() {
+        $("#senha-cliente-emprestimo").val(this.value.match(/[0-9]*/));
+    });
+});
+
+$(function() {
+    $("#cpf-cliente-emprestimo").keyup(function() {
+        $("#cpf-cliente-emprestimo").val(this.value.match(/[.0-9-]*/));
+    });
+});
+
 
