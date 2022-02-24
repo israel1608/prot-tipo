@@ -1,3 +1,7 @@
+<?php
+include("consulta.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -32,8 +36,8 @@
                 <input type="submit" value="pesquisar">
             </div>   
         </div>
-        <table id="consulta">
-            <tbody>
+        <div id="consulta-info">
+            <table id="consulta">      
                 <tr>
                     <th class="cabecalho">ID</th>
                     <th class="cabecalho">Título</th>
@@ -41,37 +45,8 @@
                     <th class="cabecalho">Ano</th>
                     <th class="cabecalho">Situação</th>
                 </tr>
-                <tr>
-                    <td class="corpo"><a href="#">199</a></td>
-                    <td class="corpo"> <a href="#">As Crônicas de alguma coisa</a></td>
-                    <td class="corpo"><a href="#">Ninguém</a></td>
-                    <td class="corpo"><a href="#">1990</a></td>
-                    <td class="corpo"><a href="#">alugado</a></td>
-                </tr>
-                <tr>
-                    <td class="corpo"><a href="#">99</a></td>
-                    <td class="corpo"> <a href="#">A volta dos que não foram</a></td>
-                    <td class="corpo"><a href="#">Costa,Israel</a></td>
-                    <td class="corpo"><a href="#">2020</a></td>
-                    <td class="corpo"><a href="#">disponível</a></td>
-                </tr>
-                <tr>
-                    <td class="corpo"><a href="#">9</a></td>
-                    <td class="corpo"><a href="#">As Crônicas de alguma coisa</a></td>
-                    <td class="corpo"><a href="#">Ninguém</a></td>
-                    <td class="corpo"><a href="#">1990</a></td>
-                    <td class="corpo"><a href="#">alugado</a></td>
-                </tr>
-                <tr>
-                    <td class="corpo"><a href="#">84</a></td>
-                    <td class="corpo"> <a href="#">A volta dos que não foram</a></td>
-                    <td class="corpo"><a href="#">Costa,Israel</a></td>
-                    <td class="corpo"><a href="#">2020</a></td>
-                    <td class="corpo"><a href="#">disponível</a></td>
-                </tr>
-                
-            </tbody>
-        </table>
+            </table>
+        </div>
     </div>
 
     <div class="emprestimo-contente ">
@@ -192,6 +167,7 @@
 </div>
 
 <script src="JS/script.js"></script>
+<script src="JS/consulta.js"></script>
 </body>
 </html>
 

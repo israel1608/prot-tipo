@@ -16,16 +16,26 @@ if(empty($cpf)||empty($id)||empty($senhaCliente)||empty($senhaAdm)){
     exit();
 }
 
-$queryLivro = $pdo->prepare("SELECT * FROM livros WHERE (id=:id)");
+$queryLivro = $pdo->prepare("SELECT situacao FROM livros WHERE (id=:id)");
 $queryLivro->bindParam(':id', $id ,PDO::PARAM_INT);
 $queryLivro->execute();
 
 //verifica se id do livro existe
-
 if(!$queryLivro->fetch()){
-    echo retorno('ID inexistente !');
-    exit();
+        echo retorno('ID inexistente!');
+        exit();
 }
+
+if($queryLivro->execute()){
+    //verifica se o livro já foi alugado
+    while($stcLivro = $queryLivro->fetch(PDO::FETCH_ASSOC)){
+        if(strcasecmp($stcLivro['situacao'],'Alugado')==0 ){
+            echo retorno('Livro já alugado!');
+            exit();
+        }
+    }
+}else echo retorno($queryLivro->errorInfo());
+
 
 $queryCliente = $pdo->prepare("SELECT situacao FROM clientes WHERE (cpf=:cpf AND senha=:senha)");
 $queryCliente->bindParam(":cpf",$cpf,PDO::PARAM_STR);
@@ -73,7 +83,7 @@ if($queryCliente->execute()){
                 if($queryFinal->execute()){
                     //update da situaçao do livro para ALUGADO
 
-                    $situacaoLivro = $pdo->prepare('UPDATE livros SET situaçao="Alugado" WHERE id=:id');
+                    $situacaoLivro = $pdo->prepare('UPDATE livros SET situacao="Alugado" WHERE id=:id');
                     $situacaoLivro->bindParam(':id',$id ,PDO::PARAM_INT);
 
                     if($situacaoLivro->execute()){
