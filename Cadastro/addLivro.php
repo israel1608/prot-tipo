@@ -28,7 +28,7 @@ if(empty($titulo)||empty($autor)||empty($editora)||empty($ano)){
     exit();
 }
 
-$stmt = $pdo->prepare("INSERT INTO livros (titulo, autor, editora, ano, situaçao) VALUES (:titulo, :autor, :editora, :ano, :situacao)");
+$stmt = $pdo->prepare("INSERT INTO livros (titulo, autor, editora, ano, situacao) VALUES (:titulo, :autor, :editora, :ano, :situacao)");
 
 $stmt->bindParam(':titulo', $titulo, PDO::PARAM_STR);
 $stmt->bindParam(':autor', $autor, PDO::PARAM_STR);

@@ -17,6 +17,7 @@ function mostrar(n){
         case 1 : limpar();
         $('.consulta-contente').css("display","block");
         $("#menu1").addClass("ativo");
+        consulta();
         break;
         case 2 : limpar();
         $('.emprestimo-contente').css("display","block");

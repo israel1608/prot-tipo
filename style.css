@@ -79,8 +79,21 @@ body{
     background-color: aliceblue;
     display: flex;
     align-items: center;
-    justify-content: center;
 
+}
+.busca{
+    margin: auto;
+}
+#recarregar{
+    margin: 10px;
+}
+#recarregar img{
+    background: no-repeat center;
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 #txtBusca{
     margin: auto;
@@ -104,6 +117,7 @@ body{
     border-width: 1px !important;
 }*/
 
+/*
 thead,
 tbody,
 tfoot,
@@ -113,7 +127,8 @@ th {
   border-color: inherit;
   border-style: solid;
   border-width: 1px !important;
-}
+}*/
+
 .cabecalho{
     padding: 10px;
     font-size: small;

@@ -13,7 +13,7 @@ if($consulta->execute()){
         $info['id'] = $result['id'];
         $info['titulo'] = $result['titulo'];
         $info['autor'] = $result['autor'];
-     // $info['editora'] = $result['editora'];
+        // $info['editora'] = $result['editora'];
         $info['ano'] = $result['ano'];
         $info['situacao'] = $result['situacao'];
         array_push($data,$info); 
@@ -25,3 +25,9 @@ $json = json_encode($data);
 $file = fopen(__DIR__ . '/' . $arquivo,'w');
 fwrite($file, $json);//salvando o arquivo json no servidor
 fclose($file); 
+
+
+
+
+
+

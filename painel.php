@@ -1,7 +1,3 @@
-<?php
-include("consulta.php");
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,20 +27,24 @@ include("consulta.php");
 <div class="informacao">
     <div class="consulta-contente">
         <div class="pesquisa">
-            <div>
+            <div id="recarregar" onclick="consulta()">
+                <img src="img/recarregar.jpg" alt="#">
+            </div>
+            <div class="busca">
                 <input type="text" id="busca-consulta" placeholder="Pesquise livro,autor">
                 <input type="submit" value="pesquisar">
             </div>   
         </div>
         <div id="consulta-info">
-            <table id="consulta">      
-                <tr>
-                    <th class="cabecalho">ID</th>
-                    <th class="cabecalho">Título</th>
-                    <th class="cabecalho">Autor</th>
-                    <th class="cabecalho">Ano</th>
-                    <th class="cabecalho">Situação</th>
-                </tr>
+            <table id="consulta" class="table table-striped">  
+                <thead >
+                    <tr id="Head">
+
+                    </tr>
+                </thead>
+                <tbody id="Corpo">
+
+                </tbody>    
             </table>
         </div>
     </div>
@@ -166,8 +166,8 @@ include("consulta.php");
     <a href="http://localhost/protótipo/index.php">sair</a>
 </div>
 
-<script src="JS/script.js"></script>
 <script src="JS/consulta.js"></script>
+<script src="JS/script.js"></script>
 </body>
 </html>
 
