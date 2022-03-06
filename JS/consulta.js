@@ -1,6 +1,7 @@
 function consulta(){
-$.ajax({url:"consulta.php"}).then(function(){
-        fetch('http://localhost/prot%C3%B3tipo/data.json').then(function(resultado){ //requisição do data.json
+
+    $.ajax({url:"consulta/consulta.php"}).then(function(){
+        fetch('http://localhost/prot%C3%B3tipo/consulta/data.json').then(function(resultado){ //requisição do data.json
         return resultado.json();
     }).then(function(json){
         $('#Head').empty()
@@ -20,10 +21,13 @@ $.ajax({url:"consulta.php"}).then(function(){
             $(`#linha${k}`).append(`<td>${json[k].ano}</td>`)
             $(`#linha${k}`).append(`<td>${json[k].situacao}</td>`)
         } 
-        
-    }).catch(function(error){
-        console.log("deu erro "+error);
+            
+        }).catch(function(error){
+
+            console.log("deu erro "+error);
+            
+        })
+
     })
-})
     
 };

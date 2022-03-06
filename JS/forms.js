@@ -298,3 +298,53 @@ $(function ($) {
         return false;
     });
  });
+
+ /*
+ $(function ($) {
+
+    // Quando enviado o formulário
+    $('#formBusca').on('submit', function () {
+ 
+       var formulario = $(this);
+       var mensagem = $('#msg-busca');
+ 
+        $(this).ajaxSubmit({
+            
+            // Definindo tipo de retorno do servidor
+            dataType: 'json',
+ 
+            // Se a requisição foi um sucesso
+            success: function (retorno) {
+
+                // Se cadastrado com sucesso
+                if (retorno.sucesso) {
+                    // Definindo estilo da mensagem (sucesso)
+                    
+
+                }
+                else {
+                    // Definindo estilo da mensagem (erro)
+                    mensagem.attr('class', 'alert alert-danger');
+                }
+ 
+                // Exibindo mensagem
+                mensagem.html(retorno.mensagem);
+ 
+            },
+ 
+            // Se houver algum erro na requisição
+            error: function () {
+ 
+                // Definindo estilo da mensagem (erro)
+                mensagem.attr('class', 'alert alert-danger');
+ 
+                // Exibindo mensagem
+                mensagem.html('Oops, ocorreu um erro');
+               
+            }
+        });
+        // Retorna FALSE para que o formulário não seja enviado de forma convencional
+        return false;
+    });
+ });
+ */

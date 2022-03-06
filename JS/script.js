@@ -38,9 +38,11 @@ function mostrar(n){
     }
 }
 
+/*
 $(function(){   //Mostrar histórico ao recarregar a página
     mostrar(1);
 })
+*/
 
 // alternar entre livros e clientes na área do cadastro
 function cadastrarCliente(){

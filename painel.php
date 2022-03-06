@@ -14,6 +14,7 @@
 
     <script src="JS/forms.js"></script>
     <script src="JS/pontuacao.js"></script>
+    <script src="JS/busca.js"></script>  
 
     <title>Sistema de gerenciamento</title>
 </head>
@@ -31,11 +32,16 @@
                 <img src="img/recarregar.jpg" alt="#">
             </div>
             <div class="busca">
-                <input type="text" id="busca-consulta" placeholder="Pesquise livro,autor">
-                <input type="submit" value="pesquisar">
+
+                <form action="consulta/busca.php" id="formBusca" target="_blank" method="post">
+                    <input type="text" id="busca-consulta" name="busca-consulta" placeholder="Pesquise livro,autor...">
+                    <input type="submit" onclick="buscar()" value="Pesquisar">                    
+                </form>
+           
             </div>   
         </div>
         <div id="consulta-info">
+           <!-- <div id="msg-busca"></div>  -->
             <table id="consulta" class="table table-striped">  
                 <thead >
                     <tr id="Head">
@@ -168,6 +174,7 @@
 
 <script src="JS/consulta.js"></script>
 <script src="JS/script.js"></script>
+
 </body>
 </html>
 
