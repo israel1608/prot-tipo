@@ -19,12 +19,10 @@ if($consulta->execute()){
     }
 }else echo($consulta->errorInfo());
    
-$arquivo = 'data.json';//tranformando em json
 $json = json_encode($data);
-$file = fopen(__DIR__ . '/' . $arquivo,'w');
-fwrite($file, $json);//salvando o arquivo json no servidor
-fclose($file);
-unlink("busca.json");
+
+echo $json;
+
 
 
  

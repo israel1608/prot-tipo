@@ -14,7 +14,8 @@
 
     <script src="JS/forms.js"></script>
     <script src="JS/pontuacao.js"></script>
-    <script src="JS/busca.js"></script>  
+    <script src="JS/consulta.js"></script>
+    <script src="JS/busca.js"></script>
 
     <title>Sistema de gerenciamento</title>
 </head>
@@ -41,7 +42,7 @@
             </div>   
         </div>
         <div id="consulta-info">
-           <!--   --><div id="msg-busca"></div>
+            <div id="msg-busca"></div>
             <table id="consulta" class="table table-striped">  
                 <thead >
                     <tr id="Head">
@@ -172,7 +173,6 @@
     <a href="http://localhost/protótipo/index.php">sair</a>
 </div>
 
-<script src="JS/consulta.js"></script>
 <script src="JS/script.js"></script>
 
 </body>
