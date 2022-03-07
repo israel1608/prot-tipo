@@ -33,14 +33,10 @@ if(!isset($_POST['busca-consulta'])){
     } 
     
     }else echo($busca->errorInfo());
-    
-    $arquivo = 'busca.json';
+ 
     $json = json_encode($dataBusca);//tranformando em json
-    $file = fopen(__DIR__ . '/' . $arquivo,'w');
-    fwrite($file, $json);//salvando o arquivo json no servidor
-    fclose($file);
-
-    echo "<script>window.close();</script>";
+   
+    echo $json;
 }
 
  

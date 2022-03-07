@@ -33,15 +33,15 @@
             </div>
             <div class="busca">
 
-                <form action="consulta/busca.php" id="formBusca" target="_blank" method="post">
+                <form action="consulta/busca.php" id="formBusca" method="post">
                     <input type="text" id="busca-consulta" name="busca-consulta" placeholder="Pesquise livro,autor...">
-                    <input type="submit" onclick="buscar()" value="Pesquisar">                    
+                    <input type="submit" value="Pesquisar">                    
                 </form>
            
             </div>   
         </div>
         <div id="consulta-info">
-           <!-- <div id="msg-busca"></div>  -->
+           <!--   --><div id="msg-busca"></div>
             <table id="consulta" class="table table-striped">  
                 <thead >
                     <tr id="Head">
